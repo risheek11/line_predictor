@@ -26,7 +26,7 @@ options, remainder = getopt.getopt(sys.argv[1:], shortopts='etr:i:', longopts=["
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 for opt, arg in options:
     if opt in ('-e', '--extract'):
-        get_img_bbox_coors(limit=10)
+        get_img_bbox_coors(limit=1000)
         create_bbox()
         normalise_image_size_and_bbox()
         get_norm_xywh_format()
