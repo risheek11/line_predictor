@@ -100,4 +100,4 @@ def get_min_dims_to_resize():
     pickle.dump(16 * (minimum // 16), fp)
     fp.close()
 
-get_min_dims_to_resize()
+# get_min_dims_to_resize()
