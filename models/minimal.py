@@ -67,9 +67,9 @@ class Minimal(Module):
         loss_for_regression = MSELoss()
         img_coors_json = read_json_file(BBOX_XYWH_JSON_PATH)
 
-        # optimizer = RMSprop(self.parameters(), lr=LEARNING_RATE, momentum=MOMENTUM)
+        optimizer = RMSprop(self.parameters(), lr=LEARNING_RATE, momentum=MOMENTUM)
         # optimizer = Adam(self.parameters(), lr=LEARNING_RATE)
-        optimizer = SGD(self.parameters(), lr=LEARNING_RATE, momentum=MOMENTUM)
+#         optimizer = SGD(self.parameters(), lr=LEARNING_RATE, momentum=MOMENTUM)
 
         scheduler = StepLR(optimizer, step_size=SCHEDULER_STEP, gamma=SCHEDULER_GAMMA)
 
